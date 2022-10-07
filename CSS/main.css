@@ -132,7 +132,7 @@ li{
 }
 
 .btn-submit{
-    border-radius: 1.25rem;
+    border-radius: 10px;
     border: none;
     background-color: var(--Purple);
     color: var(--white);
