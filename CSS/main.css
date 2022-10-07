@@ -5,8 +5,11 @@
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
     --pale-blue: hsl(225, 100%, 94%);
+    --pale-blue-trans: hsla(226, 60%, 93%, 0.532);
     --very-pale-blue: hsl(225, 100%, 98%);
 
+
+    --hover-purple:hsl(245, 83%, 68%);
     --font-size: 16px;
 }
 
@@ -26,7 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 1.25rem;
 }
 
 li{
@@ -38,83 +41,88 @@ li{
 .summary-card{
     background-color: var(--very-pale-blue);
     text-align: center;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     overflow: hidden;
-    min-width: 327px;
+    min-width: 20.4375rem;
 }
 
 .summary-illustration{
     background-image: url(/images/illustration-hero.svg);
     background-size: cover;
     background-position: center;
-    min-width: 327px;
-    height: 160px;
-    margin-bottom: 24px;
+    min-width: 20.4375rem;
+    height: 10rem;
+    margin-bottom: 1.5rem;
 }
 
 .summary-container{
-    padding: 0 32px;
+    padding: 0 2rem;
 }
 
 .summary-heading{
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 900;
-    line-height: 29px;
+    line-height: 1.8125rem;
     color: var(--dark-blue);
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .summary-body{
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     font-weight: 500;
     color: var(--desaturated-blue);
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     letter-spacing: 0.2px;
 }
 
 .annual-plan-container{
     display: flex;
     align-items: center;
-    background-color: hsla(228, 100%, 99%, 1);
-    border-radius: 11px;
-    margin-bottom: 25px;
-    padding: 15px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    background-color: var(--pale-blue-trans);
+    border-radius: 0.6875rem;
+    margin-bottom: 1.5625rem;
+    padding: 0.9375rem;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
 .plan-illustration{
-    margin-right: 15px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    margin-right: 0.9375rem;
     border-radius: 59%;
-    height: 48px;
-    width: 48px;
+    height: 3rem;
+    width: 3rem;
 }
 
 
 .summary-plan-heading{
     font-weight: 900;
-    line-height: 18px;
-    font-size: 14px;
+    line-height: 1.125rem;
+    font-size: 0.875rem;
     color: var(--dark-blue);
     margin-bottom: 3px;
-    margin-right: 45px;
+    margin-right: 2.8125rem;
 }
 
 
 .summary-plan-price{
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     font-weight: 500;
     color: var(--desaturated-blue);
-    margin-right: 45px;
+    margin-right: 2.8125rem;
 }
 
 .summary-plan-change{
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
     font-weight: 700;
     color: var(--Purple);
+    transition: all ease-in-out 0.4s;
+}
+
+.summary-plan-change:hover{
+    text-decoration: none;
+    color: var(--hover-purple);
 }
 
 .btn-container{
@@ -124,28 +132,109 @@ li{
 }
 
 .btn-submit{
-    border-radius: 20px;
+    border-radius: 1.25rem;
     border: none;
-    background-color: #382AE1;
+    background-color: var(--Purple);
     color: var(--white);
-    height: 50px;
-    width: 279px;
-    line-height: 19px;
+    height: 3.125rem;
+    width: 17.4375rem;
+    line-height: 1.1875rem;
     font-weight: 900;
-    font-size: 15px;
+    font-size: 0.9375rem;
     letter-spacing: 0.2px;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     cursor: pointer;
-    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 17px 0px rgba(118,108,241,0.34);
+    transition: all ease-in-out 0.7s;
+}
+
+.btn-submit:hover{
+    background-color: var(--hover-purple);
+    box-shadow: 0px 5px 17px 0px rgba(113, 102, 243, 0.54);
 }
 
 .btn-cancel{
     border:none;
     cursor: pointer;
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 0.9375rem;
+    line-height: 1.1875rem;
     font-weight: 900;
     color: var(--desaturated-blue);
     background-color: var(--very-pale-blue);
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
+    transition: all ease-in-out 0.4s;
+}
+
+.btn-cancel:hover{
+    color: var(--dark-blue);
+}
+
+
+/*Media Queries*/
+
+@media screen and (min-width: 48rem){
+    
+    body{
+        background-image: url(/images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+    }
+    
+    .summary-card{
+        max-width: 28.125rem;
+        height: 43.5625rem;
+    }
+
+    .summary-illustration{
+        height: 13.75rem;
+        width: 28.125rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .summary-container{
+        padding: 0 3rem;
+    }
+
+    .summary-heading{
+        font-size: 1.75rem;
+        line-height: 2.3125rem;
+        margin-bottom: 1.8125rem;
+    }
+
+    .summary-body{
+        font-size: var(--font-size);
+        line-height: 1.625rem;
+        margin-bottom: 1.8125rem;
+    }
+
+    .annual-plan-container{
+        margin-bottom: 1.8125rem;
+    }
+
+    .plan-illustration{
+        margin-right: 1.5625rem;
+    }
+
+    .summary-plan-heading{
+        font-size: var(--font-size);
+        line-height: 1.3125rem;
+    }
+
+    .summary-plan-price{
+        font-size: var(--font-size);
+        line-height: 1.3125rem;
+    }
+
+    .summary-plan-change{
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        margin-left: 3.125rem;
+    }
+   
+    .btn-submit{
+        width: 22.125rem;
+        height: 3.125rem;
+        margin-bottom: 1.8125rem;
+    }
 }
