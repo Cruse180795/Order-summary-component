@@ -1,6 +1,6 @@
 # Order-summary-component
 
-#### > Frontend Mentor Challenge (Challenge Hub: https://www.frontendmentor.io/solutions/order-summary-responsive-flexbox-rcrH33Jy4l)
+### > Frontend Mentor Challenge (Challenge Hub: https://www.frontendmentor.io/solutions/order-summary-responsive-flexbox-rcrH33Jy4l)
 
 ### > Finished Preview Site: https://ordersummaryryancruse.netlify.app/
 
